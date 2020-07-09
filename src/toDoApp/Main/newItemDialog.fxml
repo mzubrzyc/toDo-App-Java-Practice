@@ -1,0 +1,26 @@
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="toDoApp.Main.NewItemDialogController"
+            prefWidth="600" prefHeight="400">
+    <content>
+        <VBox spacing="10">
+            <TextField fx:id="titleTextField" prefWidth="300" promptText="title"/>
+            <TextArea fx:id="notesTextArea" prefWidth="300" prefHeight="400" promptText="notes"/>
+            <HBox spacing="10">
+                <Label fx:id="dueDateToggleLabel" text="Due Date"/>
+                <RadioButton fx:id="dueDateToggle"/>
+                <DatePicker fx:id="datePrev" visible="false"/>
+                <Button fx:id="btnToday" text="Today" prefWidth="100" visible="false" onAction="#setToday"/>
+            </HBox>
+        </VBox>
+    </content>
+</DialogPane>

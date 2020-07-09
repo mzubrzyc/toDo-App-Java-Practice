@@ -1,0 +1,16 @@
+#btnAdd {
+    -fx-font-size: 25;
+    -fx-padding: 0;
+}
+
+#btnDelete {
+    -fx-background-color: red;
+}
+
+#borderPane {
+    -fx-padding: 0 15 0 15;
+}
+
+.list-view {
+    -fx-selection-bar: rgba(0, 153, 204, 0.3);
+}

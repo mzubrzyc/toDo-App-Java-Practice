@@ -1,0 +1,47 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="borderPane" fx:controller="toDoApp.Main.ControllerMain"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="/main.css">
+
+    <left>
+        <Button id="btnAdd" text="+" prefWidth="40" prefHeight="40" onAction="#addNewItemDialog"/>
+    </left>
+
+    <center>
+        <VBox>
+            <HBox spacing="5">
+                <padding>
+                    <Insets left="10"/>
+                </padding>
+                <ComboBox fx:id="comboBoxComparators" promptText="Sort" onAction="#comboBoxSort"/>
+                <CheckBox fx:id="revOrderCheckBox" text="Reverse"/>
+            </HBox>
+            <HBox>
+                <padding>
+                    <Insets left="10"/>
+                </padding>
+
+                <ListView fx:id="checkList"/>
+                <VBox fx:id="leftPrevFields" spacing="10">
+                    <padding>
+                        <Insets left="10"/>
+                    </padding>
+
+                    <TextField fx:id="titlePrevField"/>
+                    <TextArea fx:id="notePrevArea"/>
+                    <HBox spacing="10">
+                        <Label text="Due Date"/>
+                        <RadioButton fx:id="dueDateToggle"/>
+                        <DatePicker fx:id="datePrev"/>
+                        <Button fx:id="btnToday" text="Today" prefWidth="100" onAction="#setToday"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Button fx:id="btnUpdate" text="Update" prefWidth="100" onAction="#setBtnUpdate"/>
+                        <Button fx:id="btnDelete" text="Delete" prefWidth="100" onAction="#deleteItemDialog"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
